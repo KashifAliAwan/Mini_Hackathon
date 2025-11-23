@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram • Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="phones-mockup"></div>
+
+        <div class="auth-box">
+            
+            <div class="form-card" id="loginBox">
+                <h1 class="logo-font">Instagram</h1>
+                
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Phone number, username, or email" required>
+                    <input type="password" id="loginPass" placeholder="Password" required>
+                    <button type="submit" class="btn-login">Log in</button>
+                </form>
+
+                <div class="divider">
+                    <div class="line"></div> <div class="or-text">OR</div> <div class="line"></div>
+                </div>
+
+                <div class="fb-login">Log in with Facebook</div>
+                <a href="#" class="forgot-pass">Forgot password?</a>
+            </div>
+
+            <div class="switch-box" id="loginSwitch">
+                Don't have an account? <a href="#" id="showSignup">Sign up</a>
+            </div>
+
+            <div class="form-card hidden" id="signupBox">
+                <h1 class="logo-font">Instagram</h1>
+                <h3 style="color:var(--text-grey); margin-bottom:15px; font-size: 14px;">Sign up to see photos and videos from your friends.</h3>
+                
+                <form id="signupForm" style="display:flex; flex-direction:column; gap:8px;">
+                    <label style="color:var(--text-grey); font-size:12px; text-align:left; width:100%;">Profile Picture:</label>
+                    <input type="file" id="signupImg" accept="image/*" style="padding: 5px; background: #262626;">
+                    
+                    <input type="email" id="signupEmail" placeholder="Mobile Number or Email" required>
+                    <input type="text" id="signupName" placeholder="Full Name" required>
+                    <input type="password" id="signupPass" placeholder="Password" required>
+                    <button type="submit" class="btn-login">Sign up</button>
+                </form>
+            </div>
+
+            <div class="switch-box hidden" id="signupSwitch">
+                Have an account? <a href="#" id="showLogin">Log in</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
