@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="layout">
+        <nav class="sidebar">
+            <a href="#" class="nav-logo">Instagram</a>
+            
+            <div class="nav-item">
+                <span class="nav-icon">🏠</span> <span class="nav-text">Home</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🔍</span> <span class="nav-text">Search</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">❤️</span> <span class="nav-text">Notifications</span>
+            </div>
+            <div class="nav-item" id="createPostBtn">
+                <span class="nav-icon">➕</span> <span class="nav-text">Create</span>
+            </div>
+            <div class="nav-item" id="logoutBtn" style="margin-top: auto;">
+                <span class="nav-icon">🚪</span> <span class="nav-text">Log out</span>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="feed-wrapper">
+                
+                <div class="create-post-box">
+                    <div class="cp-header">Create new post</div>
+                    <textarea id="postText" rows="2" placeholder="Write a caption..."></textarea>
+                    <input type="url" id="postImg" placeholder="Image URL (https://...)" style="margin-top:10px;">
+                    <div style="text-align: right; margin-top:10px;">
+                        <button id="publishBtn" class="btn-login" style="width: auto; margin:0;">Share</button>
+                    </div>
+                </div>
+
+                <div class="filters-container">
+                    <input type="text" id="searchInput" placeholder="Search posts..." class="search-input">
+                    <select id="sortSelect" class="sort-select">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+
+                <div id="feedContainer"></div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
