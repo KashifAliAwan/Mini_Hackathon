@@ -1,2 +1,2 @@
 # Project
-https://app.netlify.com/projects/mini-hacthon/configuration/general
+https://mini-hacthon.netlify.app/
