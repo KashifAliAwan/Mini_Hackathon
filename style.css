@@ -1,0 +1,260 @@
+/* --- Instagram Dark Theme Variables --- */
+:root {
+    --bg-black: #000000;
+    --bg-card: #000000;
+    --border-color: #363636;
+    --ig-blue: #0095f6;
+    --ig-blue-hover: #1877f2;
+    --text-white: #fafafa;
+    --text-grey: #a8a8a8;
+    --input-bg: #121212;
+    --nav-width: 245px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+}
+
+/* --- UTILITIES --- */
+.hidden { display: none !important; }
+a { text-decoration: none; color: var(--ig-blue); font-weight: 600; }
+
+/* --- 1. LOGIN PAGE --- */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Phone Image Placeholder */
+.phones-mockup {
+    width: 380px;
+    height: 580px;
+    background-image: url('https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?__makehaste_cache_breaker=HOgRclNOosk');
+    background-size: cover;
+    display: none; 
+}
+
+/* Auth Forms */
+.auth-box {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-font {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+input {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    padding: 9px 0 7px 8px;
+    border-radius: 3px;
+    color: var(--text-white);
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+input:focus { border: 1px solid var(--text-grey); outline: none; }
+
+.btn-login {
+    width: 100%;
+    background-color: var(--ig-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    color: var(--text-grey);
+    font-size: 13px;
+    font-weight: 600;
+    margin: 15px 0;
+    width: 100%;
+}
+.line { flex: 1; height: 1px; background-color: var(--border-color); }
+.or-text { margin: 0 15px; }
+
+.fb-login { color: #385185; font-weight: 600; font-size: 14px; margin-bottom: 12px; cursor: pointer; }
+.forgot-pass { color: var(--text-grey); font-size: 12px; margin-top: 12px; }
+
+.switch-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* --- 2. FEED PAGE --- */
+.layout { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+    width: var(--nav-width);
+    border-right: 1px solid var(--border-color);
+    padding: 30px 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--bg-black);
+    z-index: 10;
+}
+
+.nav-logo { font-family: 'Grand Hotel', cursive; font-size: 2rem; margin-bottom: 30px; display: block; }
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: var(--text-white);
+    font-size: 16px;
+}
+.nav-item:hover { background-color: rgba(255, 255, 255, 0.1); }
+.nav-icon { margin-right: 15px; font-size: 1.4rem; }
+
+/* Main Content */
+.main-content {
+    margin-left: var(--nav-width);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.feed-wrapper { width: 550px; }
+
+/* Create Post */
+.create-post-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.cp-header { font-weight: 600; margin-bottom: 10px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;}
+textarea { width: 100%; background: transparent; border: none; color: white; resize: none; outline: none; }
+
+/* Search & Sort Section */
+.filters-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--text-white);
+}
+
+.sort-select {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+    padding: 0 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Post Card */
+.post-card {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.user-profile { display: flex; align-items: center; gap: 10px; }
+
+/* Avatar Styles */
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--text-grey); }
+.avatar-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border-color); }
+
+.username { font-weight: 600; font-size: 14px; }
+.time { color: var(--text-grey); font-size: 12px; margin-left: 5px; }
+.delete-btn { background: none; border: none; color: red; cursor: pointer; font-size: 12px;}
+
+.post-img { width: 100%; border-radius: 4px; border: 1px solid var(--border-color); margin-top: 5px; }
+
+.post-actions {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+    font-size: 1.5rem;
+}
+
+.action-btn { background: none; border: none; color: white; cursor: pointer; font-size: 1.5rem; transition: 0.2s;}
+.action-btn:hover { color: var(--text-grey); }
+.liked-heart { color: #ff3040; }
+
+.likes-count { font-weight: 600; font-size: 14px; margin-bottom: 5px; }
+.caption { font-size: 14px; line-height: 1.4; }
+.caption span { font-weight: 600; margin-right: 5px; }
+
+/* --- Responsive --- */
+@media (min-width: 850px) { .phones-mockup { display: block; } }
+@media (max-width: 768px) {
+    .sidebar { width: 70px; padding: 20px 10px; }
+    .nav-text, .nav-logo { display: none; }
+    .nav-icon { margin: 0; font-size: 1.8rem; }
+    .main-content { margin-left: 70px; }
+    .feed-wrapper { width: 100%; padding: 0 10px; }
+}
+
+/* --- SweetAlert2 Dark Mode Overrides --- */
+div:where(.swal2-container) div:where(.swal2-popup) {
+    background-color: #262626 !important;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-white) !important;
+}
+div:where(.swal2-container) .swal2-title, 
+div:where(.swal2-container) .swal2-html-container { color: var(--text-white) !important; }
+div:where(.swal2-container) .swal2-confirm { background-color: var(--ig-blue) !important; box-shadow: none !important; }
+div:where(.swal2-container) .swal2-cancel { background-color: transparent !important; color: var(--text-grey) !important; border: 1px solid var(--border-color) !important; }
